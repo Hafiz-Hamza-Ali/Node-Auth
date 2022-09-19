@@ -4,6 +4,9 @@ import jwt from 'jsonwebtoken'
 import transporter from '../config/emailConfig.js'
 
 class UserController {
+  static home = async (req, res) => {
+    res.send({ "status": "sucess", "message": "User  redirect to main route." })
+  }
   static userRegistration = async (req, res) => {
     const { name, email, password, password_confirmation, tc } = req.body
     const user = await UserModel.findOne({ email: email })
