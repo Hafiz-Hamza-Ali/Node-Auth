@@ -6,7 +6,6 @@ import transporter from '../config/emailConfig.js'
 
 
 class AuthController {
-  
   static customizeDashboard = async (req, res,next) => {
     const { path, colors } = req.body
     if (path && colors && req.params.userid ) {
