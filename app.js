@@ -19,7 +19,7 @@ connectDB(DATABASE_URL)
 app.use(express.json())
 
 // Load Routes
-app.use("/", userRoutes)
+app.use("/api/user", userRoutes)
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`)
